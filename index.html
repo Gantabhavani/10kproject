@@ -7,6 +7,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" >
     <link href="./bootstrap-5.3.3-dist/css/bootstrap.css" rel="stylesheet">    
     <style>
+     #child1msg,#child2msg,#child3msg,#child4msg,#child5msg{
+        display: none;
+      }
+      .img-fluid:hover~div .hide {
+
+        color: white;
+        display: none;
+
+      }
+      .img-fluid:hover~div #child1msg ,.img-fluid:hover~div #child2msg,.img-fluid:hover~div #child3msg,
+      .img-fluid:hover~div #child4msg,.img-fluid:hover~div #child5msg{
+        color: white ;
+        display: block !important;
+        background-color: black;
+        opacity:0.5;
+        padding:20px;
+
+      }
       *{
         margin:0px;
         padding:0px;
@@ -145,15 +163,15 @@
         grid-row: 3;
         grid-column: 2;
       } 
-      #home img:hover{
+       #home img:hover{
         animation-name: example;
         animation-duration: 3s;
         animation-timing-function:linear ;
         animation-iteration-count: infinite;
         transform:rotateX(180deg);
-      }
+      } 
 
-      @keyframes example{
+       @keyframes example{
         from {
               transform: scale(1); 
          }
@@ -161,7 +179,7 @@
               transform: scale(0.8); 
         }
 
-      }
+      } 
       li a.selected{
         color:gray;
       }
@@ -253,8 +271,8 @@
         flex-direction: column;
       }
       #subsec2{
-       width:100%;
-       margin-top: 30px;
+        width:100%;
+        margin-top: 30px;
       }
       #social div img{
         width:100%;
@@ -290,37 +308,42 @@
     <div class="child1 position-relative">
        <img src="./images/left-banner-image.jpg" class="img-fluid">
        <div class="position-absolute top-50 start-50 translate-middle">
-        <p class="h1 text-white" >We Are Hexashop</p>
-        <p class="text-white" style="white-space: nowrap;">Awesome clean &create html5 template</p>
-        <button class="btn  btn-outline-dark text-white">Purchase now!</button>
+        <p  id="child1msg" class="h1 child1msg text-white">Welcome to Hexashop</p>
+        <p  class="hide h1 text-white" >We Are Hexashop</p>
+        <p class="hide text-white" style="white-space: nowrap;">Awesome clean &create html5 template</p>
+        <button class="hide btn  btn-outline-dark text-white">Purchase now!</button>
        </div>
     </div>
     <div class="child2 position-relative">
       <img src="./images/baner-right-image-01.jpg" class="img-fluid">
       <div class="position-absolute top-50 start-50 translate-middle">
-        <p class="h1 text-white">Women </p>
-        <p class="text-white">best clothes for women</p>
+        <p id="child2msg" class="h3 child1msg">Awesome women's Collections</p>
+        <p class="hide h1 text-white">Women </p>
+        <p class=" hide text-white">best clothes for women</p>
        </div>
     </div>
     <div class="child3 position-relative">
       <img src="./images/baner-right-image-02.jpg" class="img-fluid">
       <div class="position-absolute top-50 start-50 translate-middle">
-        <p class="h1 text-white">Men</p>
-        <p class="text-white">Best Clothes For Men</p>
+        <p id="child3msg" class="h3 child3msg">Awesome men's Collections</p>
+        <p class=" hide h1 text-white">Men</p>
+        <p class="hide text-white">Best Clothes For Men</p>
        </div>
     </div>
     <div class="child4 position-relative">
       <img src="./images/baner-right-image-03.jpg" class="img-fluid">
       <div class="position-absolute top-50 start-50 translate-middle">
-        <p class="h1 text-white">Kids</p>
-        <p class="text-white">Best Clothes For Kids</p>
+        <p id="child4msg" class="h3 child4msg">Awesome kid's Collections</p>
+        <p class="hide h1 text-white">Kids</p>
+        <p class="hide text-white">Best Clothes For Kids</p>
        </div>
     </div>
     <div class="child5 position-relative">
       <img src="./images/baner-right-image-04.jpg" class="img-fluid">
       <div class="position-absolute top-50 start-50 translate-middle">
-        <p class="h1 text-white">Accessories</p>
-        <p class="text-white">Best trends For Accessories</p>
+        <p id="child5msg" class="h3 child5msg">Awesome Accessories</p>
+        <p class=" hide h1 text-white">Accessories</p>
+        <p class="hide text-white">Best trends For Accessories</p>
        </div>
     </div>
 </div>
